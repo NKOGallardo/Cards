@@ -1,0 +1,142 @@
+body {
+    background-color: #3a0642;
+}
+/* CSS */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding: 10px;
+    max-width: 100%;
+}
+
+.card {
+    width: 100%;
+    height: 420px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+    border-radius: 16px;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.card-back a {
+    text-decoration: none;
+    color: blue;
+}
+
+/* Front (image) */
+.card-front {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Back (text) */
+.card-back {
+    background: #111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Images */
+.div1 {
+    background-image: url("images/Kimetsu no Yaiba Season 1.jpeg");
+}
+
+.div2 {
+    background-image: url("images/howls moving castle.jpeg");
+}
+
+.div3 {
+    background-image: url("images/download.jpeg");
+}
+
+.div4 {
+    background-image: url("images/koe no katachi.jpeg");
+}
+
+.div5 {
+    background-image: url("images/Spirited Away.jpeg");
+}
+
+/* Responsive Breakpoints */
+
+/* Large tablets and small desktops - 4 columns */
+@media (max-width: 1200px) {
+    .parent {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Tablets - 3 columns */
+@media (max-width: 992px) {
+    .parent {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .card {
+        height: 360px;
+    }
+}
+
+/* Small tablets - 2 columns */
+@media (max-width: 768px) {
+    .parent {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 8px;
+    }
+    
+    .card {
+        height: 320px;
+    }
+    
+    .card-back {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
+/* Mobile - 1 column */
+@media (max-width: 480px) {
+    .parent {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .card {
+        height: 400px;
+        max-width: 100%;
+    }
+    
+    .card-back {
+        font-size: 20px;
+    }
+}
