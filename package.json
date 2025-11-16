@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -r git@github.com:nkogallardo/Cards.git",
+    "deploy": "gh-pages -d dist -r https://github.com/nkogallardo/Cards.git",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
