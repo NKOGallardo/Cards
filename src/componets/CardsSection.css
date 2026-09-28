@@ -65,23 +65,23 @@ body {
 
 /* Images */
 .div1 {
-    background-image: url("images/Kimetsu no Yaiba Season 1.jpeg");
+    background-image: url("/src/assets/images/Kimetsu-no-Yaiba-Season-1.jpeg");
 }
 
 .div2 {
-    background-image: url("images/howls moving castle.jpeg");
+    background-image: url("/src/assets/images/Howls-moving-castle.jpeg");
 }
 
 .div3 {
-    background-image: url("images/download.jpeg");
+    background-image: url("/src/assets/images/Mashle.jpeg");
 }
 
 .div4 {
-    background-image: url("images/koe no katachi.jpeg");
+    background-image: url("/src/assets/images/A-silent-voice.jpeg");
 }
 
 .div5 {
-    background-image: url("images/Spirited Away.jpeg");
+    background-image: url("/src/assets/images/Spirited-Away.jpeg");
 }
 
 /* Responsive Breakpoints */
